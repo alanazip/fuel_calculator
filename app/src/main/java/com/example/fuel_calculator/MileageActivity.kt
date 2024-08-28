@@ -24,5 +24,15 @@ class MileageActivity : AppCompatActivity() {
             val intent = Intent(this, ResultActivity::class.java)
             startActivity(intent)
         }
+        button.setOnClickListener {
+            val intent = Intent(this, ResultActivity::class.java)
+            val precoCombustivel = 1.70 // Substitua pelo valor real
+            val consumoPorLitro = 5.0 // Substitua pelo valor real
+            val quilometragem = 150.0 // Substitua pelo valor real
+            intent.putExtra("precoCombustivel", precoCombustivel)
+            intent.putExtra("consumoPorLitro", consumoPorLitro)
+            intent.putExtra("quilometragem", quilometragem)
+            startActivity(intent)
+        }
     }
 }
