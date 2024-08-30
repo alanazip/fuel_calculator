@@ -34,25 +34,30 @@ class MileageActivity() : AppCompatActivity(), Parcelable {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_mileage)
+
+        // Configura o layout para considerar insets de sistema
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Recebe os valores passados pela FuelPriceActivity
-        val precoCombustivel = intent.getDoubleExtra("precoCombustivel", 0.0)
-        val consumoPorLitro = intent.getDoubleExtra("consumoPorLitro", 0.0)
-        val quilometragem = intent.getDoubleExtra("quilometragem", 0.0)
+        // Captura o valor de quilometragem do campo de entrada
+        val editTextMileage: EditText = findViewById(R.id.quilometragemEditText)
 
-        // Configura o botão
-        val button: Button = findViewById(R.id.button4)
+        // Recebe os valores das atividades anteriores
+        val fuelPrice = intent.getDoubleExtra("precoCombustivel", 0.0)
+        val consumptionPerLiter = intent.getDoubleExtra("consumoPorLitro", 0.0)
+
+        // Inicializa o botão e configura o clique
+        val button: Button = findViewById(R.id.button4) // Certifique-se de que este ID está correto no XML
         button.setOnClickListener {
-            // Cria o intent para passar os dados para a próxima atividade
+            val mileage = editTextMileage.text.toString().toDoubleOrNull() ?: 0.0
             val intent = Intent(this, ResultActivity::class.java)
-            intent.putExtra("precoCombustivel", precoCombustivel)
-            intent.putExtra("consumoPorLitro", consumoPorLitro)
-            intent.putExtra("quilometragem", quilometragem)
+            // Passa todos os valores para o ResultActivity
+            intent.putExtra("precoCombustivel", fuelPrice)
+            intent.putExtra("consumoPorLitro", consumptionPerLiter)
+            intent.putExtra("quilometragem", mileage)
             startActivity(intent)
         }
     }

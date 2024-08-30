@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
+import android.widget.EditText
 
 class FuelPriceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +21,15 @@ class FuelPriceActivity : AppCompatActivity() {
         }
         val button: Button = findViewById(R.id.button2)
 
+
+        // Adicione esta linha para capturar o valor de entrada
+        val editTextFuelPrice: EditText = findViewById(R.id.precoCombustivelEditText)
+
         button.setOnClickListener {
+            val fuelPrice = editTextFuelPrice.text.toString().toDoubleOrNull() ?: 0.0
             val intent = Intent(this, CarConsumptionActivity::class.java)
+            // Passa o preço do combustível para a próxima atividade
+            intent.putExtra("precoCombustivel", fuelPrice)
             startActivity(intent)
         }
     }
