@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Vermelho -->
+    <item android:top="0dp" android:bottom="571dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF0000"/> <!-- Vermelho -->
+        </shape>
+    </item>
+
+    <!-- Laranja -->
+    <item android:top="81dp" android:bottom="490dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FF7F00"/> <!-- Laranja -->
+        </shape>
+    </item>
+
+    <!-- Amarelo -->
+    <item android:top="162dp" android:bottom="409dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#FFFF00"/> <!-- Amarelo -->
+        </shape>
+    </item>
+
+    <!-- Verde -->
+    <item android:top="243dp" android:bottom="328dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#00FF00"/> <!-- Verde -->
+        </shape>
+    </item>
+
+    <!-- Azul -->
+    <item android:top="324dp" android:bottom="247dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#0000FF"/> <!-- Azul -->
+        </shape>
+    </item>
+
+    <!-- Anil -->
+    <item android:top="405dp" android:bottom="166dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#4B0082"/> <!-- Anil -->
+        </shape>
+    </item>
+
+    <!-- Violeta -->
+    <item android:top="486dp" android:bottom="85dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#8B00FF"/> <!-- Violeta -->
+        </shape>
+    </item>
+
+</layer-list>

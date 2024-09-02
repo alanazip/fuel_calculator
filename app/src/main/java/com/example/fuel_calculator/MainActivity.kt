@@ -1,31 +1,39 @@
 package com.example.fuel_calculator
 
-import android.content.Intent
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import android.widget.Button
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
-        // Localize o botão no layout
-        val button: Button = findViewById(R.id.button)
 
-        // Configure o clique no botão
+        // Referencia o TextView do layout
+        val textView = findViewById<TextView>(R.id.textView)
+
+         // Converte o fundo do TextView para AnimationDrawable e inicia a animação
+        val animationDrawable = textView.background as AnimationDrawable
+        animationDrawable.start()
+
+        // Referencia o Button do layout
+        val button = findViewById<Button>(R.id.button)
+
+        // Configura o botão para aumentar de tamanho e mudar de cor ao ser clicado
         button.setOnClickListener {
-            // Crie um Intent para navegar para a próxima Activity
-            val intent = Intent(this, FuelPriceActivity::class.java)
-            startActivity(intent)
+            button.scaleX = 1.1f // Aumenta o tamanho em 10% no eixo X
+            button.scaleY = 1.1f // Aumenta o tamanho em 10% no eixo Y
+
+            // Você pode adicionar outras ações aqui, como navegação ou lógica adicional
+
+            // Volta o tamanho ao normal após o clique
+            button.postDelayed({
+                button.scaleX = 1.0f
+                button.scaleY = 1.0f
+            }, 150) // Duração de 150 ms
         }
     }
 }
