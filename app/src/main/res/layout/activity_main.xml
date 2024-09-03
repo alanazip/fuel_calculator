@@ -8,7 +8,6 @@
     android:background="@drawable/bg"
     tools:context=".MainActivity">
 
-    <!-- Texto de Calculadora -->
 <TextView
 android:id="@+id/textView"
 android:layout_width="0dp"
