@@ -1,6 +1,5 @@
 package com.example.fuel_calculator
 
-import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
@@ -15,10 +14,6 @@ class MainActivity : AppCompatActivity() {
         // Referencia o TextView do layout
         val textView = findViewById<TextView>(R.id.textView)
 
-         // Converte o fundo do TextView para AnimationDrawable e inicia a animação
-        val animationDrawable = textView.background as AnimationDrawable
-        animationDrawable.start()
-
         // Referencia o Button do layout
         val button = findViewById<Button>(R.id.button)
 
@@ -27,13 +22,12 @@ class MainActivity : AppCompatActivity() {
             button.scaleX = 1.1f // Aumenta o tamanho em 10% no eixo X
             button.scaleY = 1.1f // Aumenta o tamanho em 10% no eixo Y
 
-            // Você pode adicionar outras ações aqui, como navegação ou lógica adicional
-
             // Volta o tamanho ao normal após o clique
             button.postDelayed({
                 button.scaleX = 1.0f
                 button.scaleY = 1.0f
             }, 150) // Duração de 150 ms
+            setContentView(R.layout.activity_fuel_price) // Certifique-se de que o layout 'activity_fuel_price' existe
         }
     }
 }
