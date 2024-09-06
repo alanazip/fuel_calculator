@@ -1,5 +1,6 @@
 package com.example.fuel_calculator
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.widget.Button
@@ -27,7 +28,10 @@ class MainActivity : AppCompatActivity() {
                 button.scaleX = 1.0f
                 button.scaleY = 1.0f
             }, 150) // Duração de 150 ms
-            setContentView(R.layout.activity_fuel_price) // Certifique-se de que o layout 'activity_fuel_price' existe
+
+            // Inicia a FuelPriceActivity usando um Intent
+            val intent = Intent(this, FuelPriceActivity::class.java)
+            startActivity(intent)
         }
     }
 }
