@@ -14,15 +14,14 @@
             android:layout_height="wrap_content"
             android:text="Calculadora de gasto de combustível"
             android:textSize="30sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
-        android:gravity="center"
-
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
             android:fontFamily="@font/sf"
             app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <Button
             android:id="@+id/button"
@@ -36,9 +35,9 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             android:textSize="30sp"
-        android:fontFamily="@font/sf"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:fontFamily="@font/sf"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
