@@ -2,14 +2,14 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true"> <!-- Estado de pressionado -->
         <shape android:shape="rectangle">
-            <solid android:color="#FFB6C1"/> <!-- Cor quando clicado (Rosa Claro) -->
-            <corners android:radius="30dp"/> <!-- Borda arredondada -->
+            <solid android:color="#64DD17"/> <!-- Cor quando clicado (Rosa Claro) -->
+            <corners android:radius="50dp"/> <!-- Borda arredondada -->
         </shape>
     </item>
     <item> <!-- Estado padrão -->
         <shape android:shape="rectangle">
-            <solid android:color="#FFA500"/> <!-- Cor padrão (Laranja) -->
-            <corners android:radius="30dp"/> <!-- Borda arredondada -->
+            <solid android:color="#64DD17"/> <!-- Cor padrão (Laranja) -->
+            <corners android:radius="50dp"/> <!-- Borda arredondada -->
         </shape>
     </item>
 </selector>

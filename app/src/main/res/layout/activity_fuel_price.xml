@@ -5,43 +5,66 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg"
     tools:context=".FuelPriceActivity">
 
-  <TextView
-      android:id="@+id/textView2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="Preço do Combustível"
-      android:textStyle="bold"
-      app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
-      android:fontFamily="@font/sf"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+<TextView
+    android:id="@+id/textView2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Preço do Combustível"
+    android:textSize="35sp"
+    android:textStyle="bold"
+    android:textColor="#FFFFFF"
+    android:background="#59CCC2C2"
+    android:paddingStart="44dp"
+    android:paddingEnd="44dp"
+    android:gravity="center"
+    android:fontFamily="@font/sf"
+    app:layout_constraintBottom_toTopOf="@+id/textInputLayout"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0.3" />
 
-  <com.google.android.material.textfield.TextInputLayout
-      android:id="@+id/textInputLayout"
-      android:layout_width="409dp"
-      android:layout_height="wrap_content"
-      android:layout_marginBottom="192dp"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintStart_toStartOf="parent">
+<com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textInputLayout"
+    android:layout_width="0dp"
+    android:background="#59CCC2C2"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:layout_marginBottom="192dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+<com.google.android.material.textfield.TextInputEditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:hint="Ex.: 1.70"
+    android:inputType="numberDecimal"
+    android:textSize="18sp"
+    android:fontFamily="@font/sf"
+    android:id="@+id/precoCombustivelEditText"/>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ex.: 1.70"
-        android:id="@+id/precoCombustivelEditText"/>
-  </com.google.android.material.textfield.TextInputLayout>
-
-  <Button
-      android:id="@+id/button2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:text="próximo"
-      android:textStyle="bold"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+<Button
+    android:id="@+id/button2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Próximo"
+    android:textSize="25sp"
+    android:textColor="#FFFFFF"
+    android:textStyle="bold"
+    android:fontFamily="@font/sf"
+    android:background="@drawable/button_selector"
+    android:elevation="48dp"
+    android:paddingStart="32dp"
+    android:paddingEnd="32dp"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>
